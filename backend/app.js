@@ -1,15 +1,29 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-require('dotenv').config();
+const cors = require('cors');
+// require('dotenv').config();
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended:true}));
+// app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
+
+app.use(cors());
 
 const products = [
     {id: 1, name:"redmi note 10s", category: "mobile"},
     {id: 2, name:"redmi 9i", category: "mobile"},
+    {id: 3, name:"redmi 9i", category: "mobile"},
+    {id: 4, name:"redmi 9i", category: "smartphone"},
+    {id: 5, name:"redmi 9i", category: "mobile"},
+    {id: 6, name:"redmi 9i", category: "mobile"},
+    {id: 7, name:"redmi note 10s", category: "mobile"},
+    {id: 8, name:"redmi 9i", category: "mobile"},
+    {id: 9, name:"redmi tv", category: "tv"},
+    {id: 10, name:"redmi 9i", category: "mobile"},
+    {id: 11, name:"samsung tv", category: "tv"},
+    {id: 12, name:"redmi 9i", category: "mobile"},
+
 ]
 
 function getProductsByCategory(category) {
