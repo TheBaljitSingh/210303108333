@@ -24,10 +24,10 @@ export default function AllProducts() {
     return (
         <div>
             <div className='h-2 text-2xl mt-4 flex justify-center items-center'>AllProducts</div>
-            <div className=' grid md:grid-cols-3 mt-5 p-5'>
+            <div className=' grid md:grid-cols-3 mt-5 p-5 gap-10 '>
                 {products.map((product) => (
-                    <div key={product.id}>
-                        <h3 className='text-xl'>{product.name}</h3>
+                    <div key={product.id} className='flex justify-center items-center flex-col '>
+                        <h3 className='text-xl'>Product: {product.name}</h3>
                         <p className='text-xl'>Category: {product.category}</p>
                     </div>
                 ))}
