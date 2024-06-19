@@ -18,6 +18,7 @@ export default function ProductDetails() {
         };
 
         fetchProduct(); 
+        
     }, [category, productId]); 
 
     if (!product) {

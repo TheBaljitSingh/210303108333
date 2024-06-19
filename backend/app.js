@@ -56,7 +56,7 @@ app.get('/categories/:categoryname/products', (req, res) => {
         page,
         n,
         totalProducts: categoryProducts.length,
-        products: paginatedProducts
+        products: categoryProducts
     });
 });
 
