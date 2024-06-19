@@ -7,9 +7,18 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 
-const categories = require("./Routes/categoryRoute.js");
+const products = [
+    {id: 1, name:""}
+]
 
-app.use("/categories/", )
+app.get("/categories/:categories/products", (req, res)=>{
+    const {categoryname} = req.params;
+
+    res.json({
+
+    })
+})
+
 
 
 
